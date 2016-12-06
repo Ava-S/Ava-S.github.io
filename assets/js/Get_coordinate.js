@@ -50,57 +50,57 @@ var sourcesAud0 = {
 }
 
 var sourcesAud1 = {
-    Coffee1: "01AudCanteen.png",
-    Coffee2: "01AudMachine.png"
+    Coffee1: "/assets/img/01AudCanteen.png",
+    Coffee2: "/assets/img/01AudMachine.png"
 }
 
 var sourcesMF0 = {
-    Coffee1: "MF0Canteen.png",
-    Coffee2: "MF0Machine1.png",
-    Coffee3: "MF0Machine2.png"
+    Coffee1: "/assets/img/MF0Canteen.png",
+    Coffee2: "/assets/img/MF0Machine1.png",
+    Coffee3: "/assets/img/MF0Machine2.png"
 }
 
 var sourcesMF1 = {
-    Coffee1: "MF1Machine1.png",
-    Coffee2: "MF1Machine2.png"
+    Coffee1: "/assets/img/MF1Machine1.png",
+    Coffee2: "/assets/img/MF1Machine2.png"
 }
 
 var sourcesMF3 = {
-    Coffee1: "MF3Machine1.png",
-    Coffee2: "MF3Machine2.png",
-    Coffee3: "MF3GEWIS.png"
+    Coffee1: "/assets/img/MF3Machine1.png",
+    Coffee2: "/assets/img/MF3Machine2.png",
+    Coffee3: "/assets/img/MF3GEWIS.png"
 }
 
 var sourcesMF4 = {
-    Coffee1: "MF4Machine1.png",
-    Coffee2: "MF4Machine2.png",
-    Coffee3: "MF4Machine3.png"
+    Coffee1: "/assets/img/MF4Machine1.png",
+    Coffee2: "/assets/img/MF4Machine2.png",
+    Coffee3: "/assets/img/MF4Machine3.png"
 }
 
 var sourcesMF5 = {
-    Coffee1: "MF5Machine1.png",
-    Coffee2: "MF5Machine2.png"
+    Coffee1: "/assets/img/MF5Machine1.png",
+    Coffee2: "/assets/img/MF5Machine2.png"
 }
 
 var sourcesMF6 = {
-    Coffee1: "MF6Machine1.png",
-    Coffee2: "MF6Machine2.png"
+    Coffee1: "/assets/img/MF6Machine1.png",
+    Coffee2: "/assets/img/MF6Machine2.png"
 }
 
 var sourcesMF7 = {
-    Coffee1: "MF7Machine1.png",
-    Coffee2: "MF7Machine2.png"
+    Coffee1: "/assets/img/MF7Machine1.png",
+    Coffee2: "/assets/img/MF7Machine2.png"
 }
 
-var defaultImgAud0 = "Aud0.png";
-var defaultImgAud1 = "01Aud.png";
-var defaultImgMF0 = "MF0.png";
-var defaultImgMF1 = "MF1.png"; 
-var defaultImgMF3 = "MF3.png";
-var defaultImgMF4 = "MF4.png";
-var defaultImgMF5 = "MF5.png"; 
-var defaultImgMF6 = "MF6.png";
-var defaultImgMF7 = "MF7.png";
+var defaultImgAud0 = "/assets/img/Aud0.png";
+var defaultImgAud1 = "/assets/img/01Aud.png";
+var defaultImgMF0 = "/assets/img/MF0.png";
+var defaultImgMF1 = "/assets/img/MF1.png"; 
+var defaultImgMF3 = "/assets/img/MF3.png";
+var defaultImgMF4 = "/assets/img/MF4.png";
+var defaultImgMF5 = "/assets/img/MF5.png"; 
+var defaultImgMF6 = "/assets/img/MF6.png";
+var defaultImgMF7 = "/assets/img/MF7.png";
 
 
 $(document).ready(function(){
