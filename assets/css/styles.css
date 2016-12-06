@@ -1,0 +1,46 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family:"Bebas Neue", "Helvetica Neue", Helvetica;
+  /*font-weight:500;*/
+  /*line-height:1.1;*/
+  color:black;
+}
+
+h1 {
+  /*margin:.67em 0;*/
+  font-size:7em;
+  text-align:center;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top:0;
+  margin-bottom:0;
+}
+
+@media (min-width:992px) {
+  #audibutton {
+    text-align:right;
+  }
+}
+
+@media (max-width:992px) {
+  #audibutton {
+    text-align:center;
+  }
+}
+
+a:focus, a:hover {
+  color:inherit;
+  text-decoration:underline;
+}
+
+.navbar {
+  position:relative;
+  margin-bottom:0px;
+  border:0px solid transparent;
+}
+
+a {
+  color:black;
+  text-decoration:none;
+}
+
