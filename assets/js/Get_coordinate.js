@@ -46,7 +46,7 @@ var mf7 = {
 }
 
 var sourcesAud0 = {
-    Coffee1: "../img/Aud0Machine.png"
+    Coffee1: "https://ava-s.github.io/assets/img/Aud0Machine.png"
 }
 
 var sourcesAud1 = {
