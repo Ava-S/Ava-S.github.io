@@ -171,7 +171,7 @@
 
 p.button {
   font-family:"Bebas Neue", "Helvetica Neue", Helvetica;
-  font-size:10em;
+  font-size:1.3em;
   border-style:solid;
   border-color:black;
   display:inline;
@@ -179,18 +179,6 @@ p.button {
   padding-left:0.5em;
   padding-right:0.5em;
   color:black;
-}
-
-@media (max-width:768px) {
-  p.button {
-    font-size:1.2em;
-  }
-}
-
-@media (min-width:768px) {
-  p.button {
-    font-size:10em;
-  }
 }
 
 div#buttons.row {
