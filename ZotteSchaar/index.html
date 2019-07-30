@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCmuli TYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -6,36 +6,132 @@
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,800&display=swap" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
     <meta charset="UTF-8">
     <title>Zotte Schaar</title>
 </head>
 <body>
 
 <div class="row">
-<div id="content" class="col-10">
-    <div class="row cont">
-        <div class="col-4 offset-1 item option option-left center">
-            <span class="type">Kleuren</span>
-            <span class="cost">€45,-</span>
+    <div id="content" class="col-10">
+        <div class="row cont">
+            <!-- FEMALE OPTIONS -->
+            <div class="col-4 offset-1 item option option-left center female-option">
+                <span class="muli type">Brushing</span><br>
+                <span class="muli cost">Van €22,5 tot €27,5</span>
+            </div>
+            <div class="col-4 offset-1 item option option-right center female-option">
+                <span class="muli type">Snit-Brushing</span><br>
+                <span class="muli cost">€42,5</span>
+            </div>
+            <div class="col-4 offset-1 item option option-left center female-option">
+                <span class="muli type">Kleuren</span><br>
+                <span class="muli cost">€45,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-right center female-option">
+                <span class="muli type">Bio Kleuren</span><br>
+                <span class="muli cost">€50,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-left center female-option">
+                <span class="muli type">Lokken Zone</span><br>
+                <span class="muli cost">€30,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-right center female-option">
+                <span class="muli type">Lokken Voll.</span><br>
+                <span class="muli cost">€60,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-left center female-option">
+                <span class="muli type">2e kleur</span><br>
+                <span class="muli cost">€10,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-right center female-option">
+                <span class="muli type">Permanent</span><br>
+                <span class="muli cost">€45,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-left center female-option">
+                <span class="muli type">Halve Perm.</span><br>
+                <span class="muli cost">€30,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-right center female-option">
+                <span class="muli type">Verzorging</span><br>
+                <span class="muli cost">€2,5</span>
+            </div>
+            <div class="col-4 offset-1 item option option-left center female-option">
+                <span class="muli type">Epileren</span><br>
+                <span class="muli cost">€5,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-right center female-option">
+                <span class="muli type">Pony</span><br>
+                <span class="muli cost">€5,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-left center female-option">
+                <span class="muli type">Opsteken</span><br>
+                <span class="muli cost">Van €35,- tot €50,-</span>
+            </div>
+            <div class="col-4 offset-1 item option option-right center female-option">
+                <span class="muli type">Snit+handdrogen</span><br>
+                <span class="muli cost">€32,5</span>
+            </div>
+
+            <!-- MALE OPTIONS -->
+            <div class="non-visible col-4 offset-1 item option option-left center male-option">
+                <span class="muli type">Herensnit</span><br>
+                <span class="muli cost">€22,5</span>
+            </div>
+            <div class="non-visible col-4 offset-1 item option option-right center male-option">
+                <span class="muli type">Tondeuse Snit</span><br>
+                <span class="muli cost">€17,5</span>
+            </div>
+            <div class="non-visible col-4 offset-1 item option option-left center male-option">
+                <span class="muli type">Scheren</span><br>
+                <span class="muli cost">€17,5</span>
+            </div>
+            <div class="non-visible col-4 offset-1 item option option-right center male-option">
+                <span class="muli type">Kleuren</span><br>
+                <span class="muli cost">€27,5</span>
+            </div>
+
+            <!-- CHILD OPTIONS -->
+            <div class="non-visible col-4 offset-1 item option option-left center child-option">
+                <span class="muli type">Jongens (12j)</span><br>
+                <span class="muli cost">€17,5</span>
+            </div>
+            <div class="non-visible col-4 offset-1 item option option-right center child-option">
+                <span class="muli type">Meisjes (12j)</span><br>
+                <span class="muli cost">Van €17,5 tot €20,-</span>
+            </div>
+            <div class="non-visible col-4 offset-1 item option option-left center child-option">
+                <span class="muli type">Baby's (3j)</span><br>
+                <span class="muli cost">€12,5</span>
+            </div>
         </div>
-        <div class="col-4 offset-1 item option option-right center">
-            <span class="type">Bio Kleuren</span>
-            <span class="cost">€50,-</span>
-        </div>
+        <!-- We'll fill this with dummy content -->
     </div>
-    <!-- We'll fill this with dummy content -->
+
+    <div class="cont col-2 center">
+        <i class="fa fa-female fa-5x sidebar-item item female"></i>
+        <i class="fa fa-male fa-5x sidebar-item item male"></i>
+        <i class="fa fa-child fa-5x sidebar-item item child"></i>
+    </div>
+
 </div>
 
-<div class="cont col-2 center">
-    <i class="fa fa-female fa-5x subitem item female" onclick="changeMenu('female')"></i>
-    <i class="fa fa-male fa-5x subitem item male" onclick="changeMenu('male')"></i>
-    <i class="fa fa-child fa-5x subitem item child" onclick="changeMenu('child')"></i>
-</div>
+<div class="row fixed-row-bottom">
 
+    <div id="receipt" class="muli col-8 offset-1">
+
+    </div>
+
+    <div class="total muli col-4 offset-1">
+        Totaal:
+    </div>
+
+    <div id="sum" class="muli col-5 offset-1">
+        €0,-
+    </div>
 </div>
 
 <!-- Page Content -->
-
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -47,6 +143,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
 
 <script src="myscript.js"></script>
 </body>
