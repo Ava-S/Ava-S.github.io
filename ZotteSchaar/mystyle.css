@@ -134,6 +134,12 @@ body {
     border-radius: 25px;
 }
 
+#modal-price .btn{
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
 .btn.save{
     background-color: cornflowerblue;
     color: white;
@@ -145,12 +151,17 @@ body {
 
 .modal-title{
     font-weight: 800;
+    font-size: 35px;
 }
 
 #modal-price .error{
     background-color: lightcoral;
     padding: 5px 1px 5px 10px;
     border-radius: 3px;
+}
+
+.modal-body, #new-cost{
+    font-size: 30px;
 }
 
 #cancel_receipt, #checkout_receipt{
@@ -173,6 +184,10 @@ body {
     font-weight: 800;
     font-size:37px;
     margin-top: 30px;
+}
+
+.modal-dialog{
+    max-width: 700px;
 }
 
 

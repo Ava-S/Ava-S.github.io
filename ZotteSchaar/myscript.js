@@ -123,7 +123,7 @@ function checkAddCosts(type, cost){
     if (cost.includes("/")){
         $("#modal-price .error").addClass("non-visible");
         $("#modal-price #modal-type").text(type);
-        $("#modal-price .modal-body label").text("Prijs (" +  cost  + " ): ");
+        $("#modal-price .modal-body label").text("Prijs (" +  cost  + "): ");
         $("#modal-price").find('input[name="NewCost"]').val("")
         $("#modal-price").modal();
     } else {
@@ -179,7 +179,11 @@ $(function () {                       //run when the DOM is ready
 });
 
 function addProduct(type, cost) {
-    $("." + mode +":contains('" + type + "')").addClass("activated");      //add the class to the clicked element
+    console.log($("." + mode +":contains('" + type + "')"));
+    console.log(type + "↵" + cost);
+    $("." + mode +":contains('" + type + "')").filter(function() {
+        return $(this).find(".type").text() === type;
+    }).addClass("activated");      //add the class to the clicked element
     if (mode === "child-two-option" || mode === "child-three-option"){
         mode = "child-option";
     }
