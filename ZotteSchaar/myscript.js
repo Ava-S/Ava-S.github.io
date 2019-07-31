@@ -1,5 +1,4 @@
 let totalCost = 0;
-let setOfTypes = "";
 let products = {
     "female-option": [0, []],
     "female-two-option": [0, []],
@@ -32,7 +31,10 @@ $(function () {                       //run when the DOM is ready
             $(".option-type:contains('Combo')").addClass('active');
             $(".male-option").addClass("non-visible");
             $(".child-option").addClass("non-visible");
+            $(".child-two-option").addClass("non-visible");
+            $(".child-three-option").addClass("non-visible");
             $(".option-type").removeClass("non-visible");
+            $(".child-title").addClass("non-visible");
             mode = "female-option";
         } else if ($(this).hasClass("female-two")){
             $(".female-two-option.combo").removeClass("non-visible");
@@ -42,22 +44,31 @@ $(function () {                       //run when the DOM is ready
             $(".female-option").addClass("non-visible");
             $(".male-option").addClass("non-visible");
             $(".child-option").addClass("non-visible");
+            $(".child-two-option").addClass("non-visible");
+            $(".child-three-option").addClass("non-visible");
             $(".option-type").removeClass("non-visible");
+            $(".child-title").addClass("non-visible");
             mode = "female-two-option"
         } else if ($(this).hasClass("male")) {
             $(".female-option").addClass("non-visible");
             $(".female-two-option").addClass("non-visible");
             $(".male-option").removeClass("non-visible");
             $(".child-option").addClass("non-visible");
+            $(".child-two-option").addClass("non-visible");
+            $(".child-three-option").addClass("non-visible");
             $(".option-type").addClass("non-visible");
+            $(".child-title").addClass("non-visible");
             mode = "male-option";
         } else {
             $(".female-option").addClass("non-visible");
             $(".female-two-option").addClass("non-visible");
             $(".male-option").addClass("non-visible");
             $(".child-option").removeClass("non-visible");
+            $(".child-two-option").removeClass("non-visible");
+            $(".child-three-option").removeClass("non-visible");
             $(".option-type").addClass("non-visible");
-            mode = "child-option";
+            $(".child-title").removeClass("non-visible");
+                mode = "child-option";
         }
     })
 });
@@ -80,13 +91,19 @@ $(function(){
 $(function () {                       //run when the DOM is ready
     $(".option").click(function () {  //use a class, since your ID gets mangled
         let type;
+        if ($(this).hasClass("child-option")) {
+            mode = "child-option";
+        }else if ($(this).hasClass("child-two-option")){
+            mode = "child-two-option";
+        } else if ($(this).hasClass("child-three-option")) {
+            mode = "child-three-option";
+        }
         if ($(this).hasClass("activated")) {
             $(this).removeClass("activated");      //add the class to the clicked element
             type = $(this).children(".type").text();
             cost = $(this).children(".cost").text();
             checkRemoveCosts(type, cost);
         } else {
-            $(this).addClass("activated");      //add the class to the clicked element
             type = $(this).children(".type").text();
             cost = $(this).children(".cost").text();
             checkAddCosts(type, cost);
@@ -115,6 +132,38 @@ function checkAddCosts(type, cost){
 }
 
 $(function () {                       //run when the DOM is ready
+    $("#cancel_receipt").click(function () {
+        products = {
+            "female-option": [0, []],
+            "female-two-option": [0, []],
+            "male-option": [0, []],
+            "child-option": [0, []],
+        };
+        totalCost = 0;
+        $("#sum").text(calculateDisplaySum(totalCost));
+        $("#receipt").html("");
+        $(".option").removeClass("activated");
+
+    })
+});
+
+$(function () {                       //run when the DOM is ready
+    $("#checkout_receipt").click(function () {
+        products = {
+            "female-option": [0, []],
+            "female-two-option": [0, []],
+            "male-option": [0, []],
+            "child-option": [0, []],
+        };
+        totalCost = 0;
+        $("#sum").text(calculateDisplaySum(totalCost));
+        $("#receipt").html("");
+        $(".option").removeClass("activated");
+
+    })
+});
+
+$(function () {                       //run when the DOM is ready
     $(".save").click(function () {
         let newCost = $("#modal-price").find('input[name="NewCost"]').val();
         if (newCost == 0){
@@ -129,11 +178,11 @@ $(function () {                       //run when the DOM is ready
     })
 });
 
-
-
-
-
 function addProduct(type, cost) {
+    $("." + mode +":contains('" + type + "')").addClass("activated");      //add the class to the clicked element
+    if (mode === "child-two-option" || mode === "child-three-option"){
+        mode = "child-option";
+    }
     totalCost += parseFloat(cost.replace(/[^0-9,]/g, '').replace(',', '.'));
     let sum = calculateDisplaySum(totalCost)
     $("#sum").text(sum);
@@ -145,10 +194,14 @@ function addProduct(type, cost) {
 }
 
 function removeProduct(type, cost) {
+    if (mode === "child-two-option" || mode === "child-three-option"){
+        mode = "child-option";
+    }
     totalCost -= parseFloat(cost.replace(/[^0-9,]/g, '').replace(',', '.'));
     let sum = calculateDisplaySum(totalCost);
     $("#sum").text(sum);
-
+    console.log(products);
+    console.log(cost);
     products[mode][0] -= parseFloat(cost.replace(/[^0-9,]/g, '').replace(',', '.'));
     let index = products[mode][1].indexOf(type + " (" + cost + ")");
     console.log(type + " (" + cost + ")");
